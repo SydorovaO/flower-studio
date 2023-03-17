@@ -998,297 +998,212 @@ justify-content: space-between;}
 */
 
  /* ===================================================MODAL WINDOW================================================== */
- .overlay {
-   
-  /* Скрываем подложку  */
-  opacity: 0;
-  visibility: hidden;
-  
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .5);
-  z-index: 20;
-  transition: .3s all;
-}
 
 
-/* Стили для модальных окон */
 
-  .modal {
-  /* Скрываем окна  */
-  opacity: 0;
-  visibility: hidden;
+ 
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 20;
+    transition: .3s all;
+  }
   
   
-  /*  Установаем ширину окна  */
-  width: 100%;
-  max-width: 272px;
+  /* Стили для модальных окон */
   
-  /*  Центрируем и задаем z-index */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 30; /* Должен быть выше чем у подложки*/
+    .modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30; 
+    
+    background-color: #fff;
+    transition: 0.3s all;
+
+
+
+
+    width: 100%;
+    max-width: 272px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 28px;
+    background-color: var(--white-color);
+    transition: transform var(--transition-dur-and-func);
+  }
   
-  /*  Побочные стили   */
-
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 28px;
-  background-color: var(--white-color);
-  transition: transform var(--transition-dur-and-func);
-}
-
-.modal-store{
-  padding-top: 28px;
-}
-
-
-
-
-
-/* Стили для активных классов подложки и окна */
-
-.modal.active,
-.overlay.active{
-  opacity: 1;
-  visibility: visible;
-}
-
-
-/* Стили для кнопки закрытия */
-
-.modal-close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  width: 18px;
-  height: 18px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-
-/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
-.modal-heading {
-  margin-bottom: 14px;
-
-  font-weight: 600;
-font-size: 20px;
-line-height: calc(24/20);
-}
-.modal-text{
-  font-weight: 500;
-font-size: 12px;
-line-height: calc(15/12);
-color: var(--modal-text-color);
-margin-bottom: 18px;
-}
-.modal-form-input-desc{
-  display: block;
-  margin-bottom: 8px;
+  .modal-store{
+    padding-top: 28px;
+  }
   
-  font-weight: 500;
-font-size: 10px;
-line-height: 12px;
-color: var(--modal-text-color);}
-
-.modal-form-input{
-  display: block;
-  padding: 10px 12px;
-  width: 100%;
-  font-size: 14px;
-  line-height: 1.5;
-  height: 35px;
-  border: 1px solid #D7D7D7;
-  border-radius: 4px;
-}
-
-
-.modal-form-field{
-  display: block;
-}
-.modal-form-field + .modal-form-field{
-  margin-top: 14px;
-}
-
-
-.modal-form-input::placeholder{
-  font-weight: 500;
+  
+  
+  
+  
+  /* Стили для активных классов подложки и окна */
+  
+  .modal.active,
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  
+  /* Стили для кнопки закрытия */
+  
+  .modal-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  } 
+  
+  
+  /* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
+  .modal-heading {
+    margin-bottom: 14px;
+  
+    font-weight: 600;
+  font-size: 20px;
+  line-height: calc(24/20);
+  }
+  .modal-text{
+    font-weight: 500;
   font-size: 12px;
   line-height: calc(15/12);
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.modal-form-send{
-  margin-top: 24px;
-  width: 240px;
-  height: 37px;
- 
-  background: var(--accent-color);
-  border-radius: 8px;
-  border: none;
-  font-weight: 600;
-font-size: 14px;
-line-height: calc(17/14);
-text-align: center;
-color: var(--white-color);
-
-}
-
-/* стилі для модалки blog */
-.modal-blog{
-  min-height: 380px;
-  padding-top: 139px;
-  background-image: url(../images/modal_window_blog/modal_blog_tel.jpg);
-  background-repeat: no-repeat;
-}
-.blog-modal-heading{
-  margin-bottom: 14px;
-  font-weight: 600;
-font-size: 19px;
-line-height: calc(23/19);
-text-align: center;
-}
-
-.blog-modal-text{
+  color: var(--modal-text-color);
   margin-bottom: 18px;
-  font-weight: 400;
-font-size: 12px;
-line-height: calc(16/12);
-text-align: center;
-color: var(--modal-text-color);
-
-}
-
-.modal-form-send.blog-btn{
-  margin-top: 18px;}
-
-
- /* .backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  background-color: rgba(46, 47, 66, 0.4); 
+  }
+  .modal-form-input-desc{
+    display: block;
+    margin-bottom: 8px;
+    
+    font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--modal-text-color);}
   
-  transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
-}
-
-.backdrop.is-hidden{
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 28px 16px;
-  width: 272px;
-  background-color: var(--white-color);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--transition-dur-and-func);
-}
-.backdrop.is-hidden .modal{
-  transform: translate(-50%, -50%) scale(1.2);
-}
-.modal-heading {
-  margin-bottom: 14px;
-
-  font-weight: 600;
-font-size: 20px;
-line-height: calc(24/20);
-}
-
-.modal-close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  width: 18px;
-  height: 18px;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.modal-text{
-  font-weight: 500;
-font-size: 12px;
-line-height: calc(15/12);
-color: var(--modal-text-color);
-margin-bottom: 18px;
-}
-
-.modal-form-input-desc{
-  display: block;
-  margin-bottom: 8px;
+  .modal-form-input{
+    display: block;
+    padding: 10px 12px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+    height: 35px;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+  }
   
-  font-weight: 500;
-font-size: 10px;
-line-height: 12px;
-color: var(--modal-text-color);}
-
-.modal-form-input{
-  display: block;
-  padding: 10px 12px;
-  width: 100%;
+  
+  .modal-form-field{
+    display: block;
+  }
+  .modal-form-field + .modal-form-field{
+    margin-top: 14px;
+  }
+  
+  
+  .modal-form-input::placeholder{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(15/12);
+    color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-form-send{
+    margin-top: 24px;
+    width: 240px;
+    height: 37px;
+   
+    background: var(--accent-color);
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
   font-size: 14px;
-  line-height: 1.5;
-  height: 35px;
-  border: 1px solid #D7D7D7;
-  border-radius: 4px;
-}
-
-
-.modal-form-field{
-  display: block;
-}
-.modal-form-field + .modal-form-field{
-  margin-top: 14px;
-}
-
-
-.modal-form-message::placeholder{
+  line-height: calc(17/14);
+  text-align: center;
+  color: var(--white-color);
+  
+  }
+  
+  /* стилі для модалки blog */
+  .modal-blog{
+    min-height: 380px;
+    padding-top: 139px;
+    background-image: url(../images/modal_window_blog/modal_blog_tel.jpg);
+    background-repeat: no-repeat;
+  }
+  .blog-modal-heading{
+    margin-bottom: 14px;
+    font-weight: 600;
+  font-size: 19px;
+  line-height: calc(23/19);
+  text-align: center;
+  }
+  
+  .blog-modal-text{
+    margin-bottom: 18px;
+    font-weight: 400;
   font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.04em;
-  color: rgba(117, 117, 117, 0.5);
-}
-.modal-form-send{
-  margin-top: 34px;
-  width: 240px;
-  height: 37px;
- 
-  background: rgba(232, 111, 84, 0.4);
-  border-radius: 8px;
-  border: none;
-  font-weight: 600;
-font-size: 14px;
-line-height: calc(17/14);
-text-align: center;
-color: var(--white-color);
+  line-height: calc(16/12);
+  text-align: center;
+  color: var(--modal-text-color);
+  
+  }
+  
+  .modal-form-send.blog-btn{
+    margin-top: 18px;}
+  
+  
+  
+  
 
-} */
-.hero {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .hero {
   position: relative;
 
   max-width: 1280px;
