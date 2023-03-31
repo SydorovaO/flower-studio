@@ -26,34 +26,37 @@
           </svg>
         </a>
         <nav class="navigation">
-          <ul class="menu list">
-            <li class="menu-item">
-              <a href="./index.html" class="menu-link">Anemone</a>
+          <ul class="navigation-list list">
+            <li class="navigation-list-item">
+              <a href="#hero" class="navigation-list-link">Anemone</a>
             </li>
-            <li class="menu-item">
-              <a href="#about" class="menu-link">About us</a>
+            <li class="navigation-list-item">
+              <a href="#about" class="navigation-list-link">About us</a>
             </li>
-            <li class="menu-item">
-              <a href="#store" class="menu-link">Store</a>
+            <li class="navigation-list-item">
+              <a href="#store" class="navigation-list-link">Store</a>
             </li>
-            <li class="menu-item">
-              <a href="#delivery" class="menu-link">Delivery</a>
+            <li class="navigation-list-item">
+              <a href="#delivery" class="navigation-list-link">Delivery</a>
             </li>
-            <li class="menu-item">
-              <a href="#blog" class="menu-link">Blog</a>
+            <li class="navigation-list-item">
+              <a href="#blog" class="navigation-list-link">Blog</a>
             </li>
           </ul>
         </nav>
 
-        <a href="tel:" class="header-phone">
-          <svg class="icon-tel-mob" width="22" height="22" onclick="">
-            <use href="./images/icons.svg#icon-tel_mobile"></use>
-          </svg>
-        </a>
+        <div class="heder-icons-wrap">
+          <button class="header-contact" type="button">
+            <a href="tel:111111111" class="header-phone">
+              <svg class="icon-tel-mob" width="22" height="22">
+                <use href="./images/icons.svg#icon-tel_mobile"></use>
+              </svg>
+            </a>
+          </button>
 
         <button
           type="button"
-          class="mobile-menu-btn js-open-menu"
+          class="burger-btn js-open-menu"
           aria-expanded="false"
           aria-controls="mobile-menu"
         >
@@ -62,6 +65,7 @@
           </svg>
         </button>
       </div>
+
     </header>
     <main>
       <section class="hero">
@@ -529,30 +533,44 @@
 
 
     <!-- Mobile-menu -->
-    <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="mobile-menu-btn-close js-close-menu">
-        <svg class="mobile-menu-btn-close-icon" width="24" height="24">
+    <div class="menu js-menu-container" id="mobile-menu">
+      <button class="menu__button js-close-menu">
+        <svg class="menu__icon" width="24" height="24">
           <use href="./images/icons.svg#icon-x"></use>
         </svg>
       </button>
 
-      <ul class="mobile-menu list">
-        <li class="mobile-menu-item">
-          <a href="./index.html" class="mobile-menu-link">Anemone</a>
+       <nav class="menu__nav">
+      <ul class="menu__nav-list list">
+        <li class="menu__nav-item">
+          <a href="./index.html" class="menu__nav-link js-close-menu link"
+            >Anemone</a
+          >
         </li>
-        <li class="mobile-menu-item">
-          <a href="" class="mobile-menu-link">About us</a>
+        <li class="menu__nav-item">
+          <a href="#about" class="menu__nav-link js-close-menu link"
+            >About us</a
+          >
         </li>
-        <li class="mobile-menu-item">
-          <a href="#" class="mobile-menu-link">Store</a>
+        <li class="menu__nav-item">
+          <a href="#store" class="menu__nav-link js-close-menu link"
+            >Store</a
+          >
         </li>
-        <li class="mobile-menu-item">
-          <a href="#" class="mobile-menu-link">Delivery</a>
+        <li class="menu__nav-item">
+          <a
+            href="#delivery"
+            class="menu__nav-link js-close-menu link"
+            >Delivery</a
+          >
         </li>
-        <li class="mobile-menu-item">
-          <a href="#" class="mobile-menu-link">Blog</a>
+        <li class="menu__nav-item">
+          <a href="#blog" class="menu__nav-link js-close-menu link"
+            >Blog</a
+          >
         </li>
       </ul>
+    </nav>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/body-scroll-lock@4.0.0-beta.0/lib/bodyScrollLock.min.js"></script>
