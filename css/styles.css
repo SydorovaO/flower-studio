@@ -5,7 +5,6 @@
     --hover-color: #E25B41;
     --focus-color: #FA6F54;
     --modal-text-color: #5C5C5C;
-    --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 
@@ -48,18 +47,18 @@ img {
   |================================================================================================================
 */
 .section-title{
+  position: relative;
   line-height: calc(29/24);
   margin-bottom: 32px;
-  display: flex;
-  gap: 14px;
-  align-items: center;
 }
 .section-title::after{
+  position: absolute;
+  right: 0;
   content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    border: 1px solid var(--primary-text-color);
+  display: block;
+  border: 1px solid #000000;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media screen and (min-width: 768px){
@@ -316,6 +315,15 @@ img {
   animation: infinity-rotate 30s linear 4s infinite;
 }
 
+/* @keyframes infinity-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+} */
 
 .hero-title{
   position: absolute;
@@ -406,6 +414,11 @@ img {
   padding-bottom: 60px;
 }
 
+
+.section-title.about-title::after{
+  width: 183px;
+}
+
 .about-text{
 line-height: calc(20/16);
 margin-bottom: 16px;
@@ -419,7 +432,8 @@ margin-bottom: 16px;
   .section-title.about-title{
     margin-bottom: 30px;
   }
-
+  .section-title.about-title::after{
+    width: 538px;}
 
   .about-text{
     width: 322px;
@@ -449,7 +463,8 @@ margin-bottom: 16px;
     margin-bottom: 26px;
 
   }
- 
+  .section-title.about-title::after{
+    width: 1050px;}
 
   .about-text{
     width: 510px;
@@ -477,7 +492,9 @@ margin-bottom: 16px;
   padding-bottom: 60px;
 }
 
-
+.section-title.store-title::after{
+  width: 190px;
+}
 
 .store-list{
   display: flex;
@@ -543,7 +560,10 @@ margin-bottom: 16px;
   .store{
     padding-bottom: 100px;
   }
- 
+  .section-title.store-title::after{
+    width: 550px;
+  }
+
   .section-title.store-title{
     margin-bottom: 60px;
   }
@@ -593,6 +613,9 @@ margin-bottom: 16px;
 /* ========Desktop styles=========== */
 @media screen and (min-width: 1280px){
 
+  .section-title.store-title::after{
+    width: 1062px;
+  }
 
   .section-title.store-title{
     margin-bottom: 80px;
@@ -998,329 +1021,117 @@ justify-content: space-between;}
 */
 
  /* ===================================================MODAL WINDOW================================================== */
-
-
-
- 
-.overlay {
-    opacity: 0;
-    visibility: hidden;
-    
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .5);
-    z-index: 20;
-    transition: .3s all;
-  }
-  
-  
-  /* Стили для модальных окон */
-  
-    .modal {
-    opacity: 0;
-    visibility: hidden;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 30; 
-    
-    background-color: #fff;
-    transition: 0.3s all;
-
-
-
-
-    width: 100%;
-    max-width: 272px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 28px;
-    background-color: var(--white-color);
-    transition: transform var(--transition-dur-and-func);
-  }
-  
-  .modal-store{
-    padding-top: 28px;
-  }
-  
-  
-  
-  
-  
-  /* Стили для активных классов подложки и окна */
-  
-  .modal.active,
-  .overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  
-  /* Стили для кнопки закрытия */
-  
-  .modal-close-btn {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    width: 18px;
-    height: 18px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  } 
-  
-  
-  /* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
-  .modal-heading {
-    margin-bottom: 14px;
-  
-    font-weight: 600;
-  font-size: 20px;
-  line-height: calc(24/20);
-  }
-  .modal-text{
-    font-weight: 500;
-  font-size: 12px;
-  line-height: calc(15/12);
-  color: var(--modal-text-color);
-  margin-bottom: 18px;
-  }
-  .modal-form-input-desc{
-    display: block;
-    margin-bottom: 8px;
-    
-    font-weight: 500;
-  font-size: 10px;
-  line-height: 12px;
-  color: var(--modal-text-color);}
-  
-  .modal-form-input{
-    display: block;
-    padding: 10px 12px;
-    width: 100%;
-    font-size: 14px;
-    line-height: 1.5;
-    height: 35px;
-    border: 1px solid #D7D7D7;
-    border-radius: 4px;
-  }
-  
-  
-  .modal-form-field{
-    display: block;
-  }
-  .modal-form-field + .modal-form-field{
-    margin-top: 14px;
-  }
-  
-  
-  .modal-form-input::placeholder{
-    font-weight: 500;
-    font-size: 12px;
-    line-height: calc(15/12);
-    color: rgba(0, 0, 0, 0.3);
-  }
-  
-  .modal-form-send{
-    margin-top: 24px;
-    width: 240px;
-    height: 37px;
-   
-    background: var(--accent-color);
-    border-radius: 8px;
-    border: none;
-    font-weight: 600;
-  font-size: 14px;
-  line-height: calc(17/14);
-  text-align: center;
-  color: var(--white-color);
-  
-  }
-  
-  /* стилі для модалки blog */
-  .modal-blog{
-    min-height: 380px;
-    padding-top: 139px;
-    background-image: url(../images/modal_window_blog/modal_blog_tel.jpg);
-    background-repeat: no-repeat;
-  }
-  .blog-modal-heading{
-    margin-bottom: 14px;
-    font-weight: 600;
-  font-size: 19px;
-  line-height: calc(23/19);
-  text-align: center;
-  }
-  
-  .blog-modal-text{
-    margin-bottom: 18px;
-    font-weight: 400;
-  font-size: 12px;
-  line-height: calc(16/12);
-  text-align: center;
-  color: var(--modal-text-color);
-  
-  }
-  
-  .modal-form-send.blog-btn{
-    margin-top: 18px;}
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- .hero {
-  position: relative;
-
-  max-width: 1280px;
-  height: 878px;
-  margin: 0 auto;
-}
-.hero-container {
-  position: relative;
-  z-index: 10;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 24px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.hero-title {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
-  font-weight: 400;
-  font-size: 160px;
-  line-height: calc(195 / 160);
-
-  animation: move-vertical 1000ms ease-out 1000ms both;
-}
-.hero-title::after {
-  content: "";
-  position: absolute;
-  top: 20px;
-  right: 21px;
-
-  width: 58px;
-  height: 8px;
-  background-color: currentColor;
-}
-.hero-badge {
-  width: 102px;
-  margin-left: 210px;
-  font-size: 32px;
-  line-height: 39px;
-
-  animation: move-vertical 1000ms ease-out 1000ms both;
-}
-.hero-btn {
-  margin-right: 145px;
-  animation: move-vertical 1000ms ease-out 1000ms both;
-}
-[href="#btn-txt"] {
-  transform-origin: center;
-  animation: infinity-rotate 30s linear 4s infinite;
-}
-.hero-btn:hover [href="#btn-txt"],
-.hero-btn:focus [href="#btn-txt"] {
-  animation-play-state: paused;
-}
-
-[href="#btn-arrow"] {
-  transform-origin: center;
-  transition: transform 500ms ease-out;
-}
-.hero-btn:hover [href="#btn-arrow"],
-.hero-btn:focus [href="#btn-arrow"] {
-  transform: rotate(-122deg);
-}
-.hero-shape {
-  position: absolute;
+ .backdrop {
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(46, 47, 66, 0.4); 
+  
+  transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
+}
+
+.backdrop.is-hidden{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  padding: 28px 16px;
+  width: 272px;
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--transition-dur-and-func);
+}
+.backdrop.is-hidden .modal{
+  transform: translate(-50%, -50%) scale(1.2);
+}
+.modal-heading {
+  margin-bottom: 14px;
 
+  font-weight: 600;
+font-size: 20px;
+line-height: calc(24/20);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-text{
+  font-weight: 500;
+font-size: 12px;
+line-height: calc(15/12);
+color: var(--modal-text-color);
+margin-bottom: 18px;
+}
+
+.modal-form-input-desc{
+  display: block;
+  margin-bottom: 8px;
+  
+  font-weight: 500;
+font-size: 10px;
+line-height: 12px;
+color: var(--modal-text-color);}
+
+.modal-form-input{
+  display: block;
+  padding: 10px 12px;
   width: 100%;
-  height: 100%;
-
-  animation: scale-up-center 1000ms ease-out 1000ms both;
-}
-.hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  font-size: 14px;
+  line-height: 1.5;
+  height: 35px;
+  border: 1px solid #D7D7D7;
+  border-radius: 4px;
 }
 
-/* animations properties */
-@keyframes scale-up-center {
-  0% {
-    clip-path: inset(150px 421px 92px 421px round 226px);
-  }
-  50% {
-    clip-path: inset(150px 345px 92px 345px round 226px);
-  }
-  100% {
-    clip-path: inset(0 round 0);
-  }
+
+.modal-form-field{
+  display: block;
+}
+.modal-form-field + .modal-form-field{
+  margin-top: 14px;
 }
 
-@keyframes move-vertical {
-  from {
-    transform: translateX(var(--shift-from-x, -50%))
-      translateY(var(--shift-from-y, 0));
-  }
-  to {
-    transform: translateX(var(--shift-to-x, -50%))
-      translateY(var(--shift-to-y, 0));
-    color: #fff;
-    fill: #fff;
-  }
-}
 
-@keyframes infinity-rotate {
-  from {
-    transform: rotate(-360deg);
-  }
-  to {
-    transform: rotate(0);
-  }
+.modal-form-message::placeholder{
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-send{
+  margin-top: 34px;
+  width: 240px;
+  height: 37px;
+ 
+  background: rgba(232, 111, 84, 0.4);
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+font-size: 14px;
+line-height: calc(17/14);
+text-align: center;
+color: var(--white-color);
+
 }
