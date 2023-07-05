@@ -66,7 +66,16 @@ img {
     gap: 16px;
   }
 }
-
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(46, 47, 66, 0.4);
+  display: none;
+}
 /**
   |===============================================================================================================
   | Container styles
@@ -1163,13 +1172,18 @@ background-image: url(../images/delivery/delivery_mob.jpg);
   top: 50%;
   left: 50%;
   padding: 28px 16px;
-  width: 272px;
+  /* width: 272px;  */
   background-color: var(--white-color);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  /* border-radius: 4px; */
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--transition-dur-and-func);
+  z-index: 20;
+  display: none;
+}
+
+.modal.is-show,
+.overlay.is-show {
+  display: block;
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.2);
