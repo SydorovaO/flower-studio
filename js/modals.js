@@ -25,3 +25,16 @@ function togglePageScrolling() {
     document.body.style.overflow = 'visible';
   }
 }
+const modalThanks = document.querySelector('.modal-form-send');
+
+// modalThanks.addEventListener('click', () => {
+//   $('.js-modal[data-modal="submit"]').removeClass('is-show');
+//   $('.js-modal-overlay').addClass('is-show');
+// });
+$('.js-open-modal[data-modal="thanks"]').click(function () {
+  // Закрити модальне вікно 1
+  $('.js-modal[data-modal="submit"]').removeClass('is-show');
+  $('.js-modal-overlay').addClass('is-show');
+  // Відкрити модальне вікно 3
+  $('.js-modal[data-modal="thanks"]').addClass('is-show');
+});
