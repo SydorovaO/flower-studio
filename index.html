@@ -116,7 +116,7 @@
               loading="lazy"
             />
           </picture>
-          <button class="hero-btn js-open-modal" data-modal="submit">
+          <button class="hero-btn js-open-modal" data-modal="1">
             <svg class="hero-btn-icon" width="64" height="76">
               <use href="./images/icons.svg#icon-btn_mobile"></use>
             </svg>
@@ -327,7 +327,7 @@
               <p class="store-list-item-text">from $60</p>
             </li>
           </ul>
-          <button class="store-btn js-open-modal" type="button" data-modal="submit">Order flowers</button>
+          <button class="store-btn js-open-modal" type="button" data-modal="1">Order flowers</button>
         </div>
       </section>
       <!-------------------------------------------- Section Delivery ------------------------------------>
@@ -629,7 +629,7 @@
  
 
          <p class="blog-text">Follow to our newsletter</p>
-          <button class="blog-btn js-open-modal" type="button" data-modal="subscribe">Subscribe</button>
+          <button class="blog-btn js-open-modal" type="button" data-modal="2">Subscribe</button>
 
         </div>
       </section>
@@ -731,12 +731,14 @@
 
 
 
-<!-- Modal windows -->
+
+    <div class="backdrop js-backdrop-modal"></div>
+  <!-- Modal windows -->
 <!-- <div class="backdrop is-hidden" data-modal></div> -->
 
 <!-- modal 1 -->
-<div class="modal submit-modal js-modal" data-modal="submit">
-  <button class="modal-close-btn js-modal-close" type="button" data-modal-close>
+<div class="modal modal1"  data-modal="1">
+  <button class="modal-close-btn js-modal-close" type="button">
     <svg class="modal-close-btn-icon" width="18" height="18">
       <use href="./images/icons.svg#icon-close"></use>
     </svg>
@@ -773,12 +775,12 @@
           />
        
       </label>
-      <button class="modal-form-send js-open-modal" data-modal="thanks" type="submit">Send</button>
+      <button class="modal-form-send js-open-modal"  data-modal="3" type="submit">Send</button>
     </form>
 </div>
 
 <!-- modal 2 subscribe -->
-<div class="modal subscribe-modal js-modal" data-modal="subscribe">
+<div class="modal modal2" data-modal="2">
   <button class="modal-close-btn js-modal-close" type="button" data-modal-close>
     <svg class="modal-close-btn-icon" width="18" height="18">
       <use href="./images/icons.svg#icon-close"></use>
@@ -794,12 +796,12 @@
     name="user_email"
     required
     placeholder="Your email">  
-  <button class="modal-form-subscribe" type="submit">Subscribe</button>
+  <button class="modal-form-subscribe js-modal-close" type="submit">Subscribe</button>
     
 </div>
 
 <!-- modal 3 Thank you -->
-<div class="modal thanks-modal js-modal" data-modal="thanks">
+<div class="modal modal3" data-modal="3">
   <button class="modal-close-btn js-modal-close" type="button" data-modal-close>
     <svg class="modal-close-btn-icon" width="18" height="18">
       <use href="./images/icons.svg#icon-close"></use>
@@ -809,10 +811,10 @@
     Thank you!
   </p>
   <p class="modal-text-thanks">We have received your contact details and will reach you soon.</p>
-  <button class="modal-form-thanks" type="submit">Continue</button> 
+  <button class="modal-form-thanks js-modal-close" type="button">Continue</button> 
 </div>
 
-<div class="overlay js-modal-overlay"></div>
+
 
     <!-- Mobile-menu -->
     <div class="menu js-menu-container" id="mobile-menu">
