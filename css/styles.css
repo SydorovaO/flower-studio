@@ -1354,12 +1354,16 @@ background-image: url(../images/delivery/delivery_mob.jpg);
   | Modal2 styles
   |============================
 */
+.modal2 {
+  width: 272px;
+  height: 380px;
+}
 .img-wrap {
   width: 272px;
   height: 121px;
   background-repeat: no-repeat;
+  background-size: contain;
   background-image: url(/images/modals/modal2/modal-blog-tel.jpg);
-  background-repeat: no-repeat;
 }
 @media (min-device-pixel-ratio: 2),
   (-webkit-min-device-pixel-ratio: 2),
@@ -1381,6 +1385,8 @@ background-image: url(../images/delivery/delivery_mob.jpg);
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .img-wrap {
+      width: 588px;
+      height: 271px;
       background-image: url(/images/modals/modal2/modal-blog-tab@2x.jpg);
     }
   }
@@ -1423,48 +1429,149 @@ background-image: url(../images/delivery/delivery_mob.jpg);
   color: var(--modal-text-color);
 }
 
-.modal-form-send.blog-btn {
-  margin-top: 18px;
+.modal2-form-input-desc {
+  color: var(--modal-text-color);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: calc(12 / 10);
+  display: block;
+  margin-bottom: 8px;
 }
+.modal-input-subscribe {
+  height: 35px;
+  width: 100%;
+  padding: 10px auto 10px 12px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
 
+  color: var(--primary-text-color);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: calc(15 / 12);
+}
+.modal-form-subscribe {
+  display: flex;
+  width: 100%;
+  padding: 10px 82px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--accent-color);
+
+  color: var(--white-color);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: calc(17 / 14);
+}
+.modal-form-subscribe ::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  line-height: calc(15 / 12);
+}
 /* Tablet styles */
 @media screen and (min-width: 768px) {
-  .modal-blog {
-    max-width: 588px;
+  .modal2 {
+    width: 588px;
+    height: 644px;
   }
 
   .modal-desc-wrap {
     padding: 28px 118px 40px;
   }
 
-  .blog-modal-heading {
+  .modal-heading-subscribe {
     margin-bottom: 24px;
     font-size: 28px;
     line-height: calc(34 / 28);
     white-space: nowrap;
-  }
-
-  .modal-heading-subscribe {
+    font-weight: 600;
     width: 336px;
-
-    margin-bottom: 32px;
-    font-size: 16px;
-    line-height: calc(21 / 16);
   }
-  .modal-form-send.blog-btn {
-    margin-top: 28px;
+  .modal-text-subscribe {
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    margin-bottom: 32px;
+    width: 336px;
+  }
+  .modal2-form-input-desc {
+    font-size: 14px;
+    line-height: calc(17 / 14);
+    margin-bottom: 8px;
+  }
+  .modal-input-subscribe {
+    width: 336px;
+    height: 49px;
+    padding: 16px 248px 16px 12px;
+    margin-bottom: 28px;
+  }
+  .modal-form-subscribe ::placeholder {
+    font-size: 14px;
+    line-height: calc(17 / 14);
+  }
+  .modal-form-subscribe {
+    width: 336px;
+    height: 50px;
+    padding: 15px 126px;
+
+    font-size: 18px;
+    line-height: calc(22 / 18);
   }
 }
 
 /* Desktop styles */
 @media screen and (min-width: 1280px) {
-  .modal-blog {
+  .modal2 {
     display: flex;
-    max-width: 860px;
-    max-height: 588px;
+
+    width: 860px;
+    height: 528px;
   }
   .modal-desc-wrap {
     padding: 111px 40px 112px;
+  }
+
+  .modal-desc-wrap {
+    padding: 28px 118px 40px;
+  }
+
+  .modal-heading-subscribe {
+    margin-bottom: 24px;
+    font-size: 28px;
+    line-height: calc(34 / 28);
+    white-space: nowrap;
+    font-weight: 600;
+    width: 336px;
+  }
+  .modal-text-subscribe {
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    margin-bottom: 32px;
+    width: 336px;
+  }
+  .modal2-form-input-desc {
+    font-size: 14px;
+    line-height: calc(17 / 14);
+    margin-bottom: 8px;
+  }
+  .modal-input-subscribe {
+    width: 336px;
+    height: 49px;
+    padding: 16px 248px 16px 12px;
+    margin-bottom: 28px;
+  }
+  .modal-form-subscribe ::placeholder {
+    font-size: 14px;
+    line-height: calc(17 / 14);
+  }
+  .modal-form-subscribe {
+    width: 336px;
+    height: 50px;
+    padding: 15px 126px;
+
+    font-size: 18px;
+    line-height: calc(22 / 18);
   }
 }
 
