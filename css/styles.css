@@ -1394,7 +1394,7 @@ background-image: url(../images/delivery/delivery_mob.jpg);
 
 @media screen and (min-width: 1280px) {
   .img-wrap {
-    width: 428px;
+    /* width: 428px; */
     height: 528px;
     background-image: url(/images/modals/modal2/modal-blog-desk.jpg);
   }
@@ -1409,7 +1409,7 @@ background-image: url(../images/delivery/delivery_mob.jpg);
 }
 
 .modal-desc-wrap {
-  padding: 18px 16px 28px 16px;
+  padding: 18px 18px 28px;
 }
 
 .modal-heading-subscribe {
@@ -1418,6 +1418,7 @@ background-image: url(../images/delivery/delivery_mob.jpg);
   font-size: 19px;
   line-height: calc(23 / 19);
   text-align: center;
+  width: 240px;
 }
 
 .modal-text-subscribe {
@@ -1532,10 +1533,6 @@ background-image: url(../images/delivery/delivery_mob.jpg);
     padding: 111px 40px 112px;
   }
 
-  .modal-desc-wrap {
-    padding: 28px 118px 40px;
-  }
-
   .modal-heading-subscribe {
     margin-bottom: 24px;
     font-size: 28px;
@@ -1575,14 +1572,6 @@ background-image: url(../images/delivery/delivery_mob.jpg);
   }
 }
 
-.modal-heading-subscribe {
-}
-.modal-text-subscribe {
-}
-.modal-input-subscribe {
-}
-.modal-form-subscribe {
-}
 /**
   |============================
   | Modal3 styles
