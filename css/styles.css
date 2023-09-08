@@ -1363,14 +1363,15 @@ background-image: url(../images/delivery/delivery_mob.jpg);
   height: 121px;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(/images/modals/modal2/modal_blog_tel@1x.jpg);
+  /* background-image: url(/images/modals/modal2/modal_blog_tel@1x.jpg); */
+  background-image: url(/images/delivery/delivery_mob.jpg);
 }
 @media (min-device-pixel-ratio: 2),
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .img-wrap {
-    background-image: url(/images/modals/modal2/modal_blog_tel@2x.jpg);
+    background-image: url(/images/delivery/delivery_mob@2x.jpg);
   }
 }
 
