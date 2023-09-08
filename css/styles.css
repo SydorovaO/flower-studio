@@ -1363,7 +1363,7 @@ background-image: url(../images/delivery/delivery_mob.jpg);
   height: 121px;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(/images/modals/modal2/modal_blog_tel.jpg);
+  background-image: url(/images/modals/modal2/modal_blog_tel@1x.jpg);
 }
 @media (min-device-pixel-ratio: 2),
   (-webkit-min-device-pixel-ratio: 2),
@@ -1378,7 +1378,7 @@ background-image: url(../images/delivery/delivery_mob.jpg);
   .img-wrap {
     width: 588px;
     height: 271px;
-    background-image: url(/images/modals/modal2/modal_blog_tab.jpg);
+    background-image: url(/images/modals/modal2/modal_blog_tab@1x.jpg);
   }
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -1396,7 +1396,7 @@ background-image: url(../images/delivery/delivery_mob.jpg);
   .img-wrap {
     width: 428px;
     height: 528px;
-    background-image: url(/images/modals/modal2/modal_blog_desk.jpg);
+    background-image: url(/images/modals/modal2/modal_blog_desk@1x.jpg);
   }
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
