@@ -1377,7 +1377,7 @@ background-image: url(../images/delivery/delivery_mob.jpg);
   .img-wrap {
     width: 588px;
     height: 271px;
-    background-image: url(/images/modals/modal2/modal_blog-tab@1x.jpg);
+    background-image: url(../images/modals/modal2/modal_blog-tab@1x.jpg);
   }
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -1386,7 +1386,7 @@ background-image: url(../images/delivery/delivery_mob.jpg);
     .img-wrap {
       width: 588px;
       height: 271px;
-      background-image: url(/images/modals/modal2/modal_blog-tab@2x.jpg);
+      background-image: url(../images/modals/modal2/modal_blog-tab@2x.jpg);
     }
   }
 }
@@ -1395,14 +1395,14 @@ background-image: url(../images/delivery/delivery_mob.jpg);
   .img-wrap {
     width: 428px;
     height: 528px;
-    background-image: url(/images/modals/modal2/modal_blog-desk@1x.jpg);
+    background-image: url(../images/modals/modal2/modal_blog-desk@1x.jpg);
   }
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .img-wrap {
-      background-image: url(/images/modals/modal2/modal_blog-desk@2x.jpg);
+      background-image: url(../images/modals/modal2/modal_blog-desk@2x.jpg);
     }
   }
 }
