@@ -1362,7 +1362,6 @@ background-image: url(../images/delivery/delivery_mob.jpg);
   width: 272px;
   height: 121px;
   background-repeat: no-repeat;
-  background-size: contain;
   background-image: url(/images/modals/modal2/modal_blog_tel@1x.jpg);
 }
 @media (min-device-pixel-ratio: 2),
